@@ -1,4 +1,5 @@
-﻿using Indexers;
+﻿using Generics;
+using Indexers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,8 +10,10 @@ namespace C_Sharp_Advanced_Subjects
 {
     class Program
     {
+
         static void Main(string[] args)
         {
+            // Indexers:
             Person person = new Person("Senior Developer", "Johnny", 48, "CodeOasis");
 
             person[0] = "מר.";
@@ -19,6 +22,27 @@ namespace C_Sharp_Advanced_Subjects
 
             person[2] = "סיר";
 
+            //Generics:
+            GenericArray<int> intArray = new GenericArray<int>(Globals.ARRAY_SIZE);
+            for (int i = 0; i < Globals.ARRAY_SIZE; i++)
+            {
+                intArray.SetItem(new Random().Next(1, 9), i);
+                Console.WriteLine(intArray.GetItem(i));
+            }
+
+            GenericArray<char> charArray = new GenericArray<char>(Globals.ARRAY_SIZE);
+            for (int i = 0; i < Globals.ARRAY_SIZE; i++)
+            {
+                int randomIndex = new Random().Next(0, Globals.CHARS.Length);
+                charArray.SetItem(Globals.CHARS[randomIndex], i);
+                Console.WriteLine(charArray.GetItem(i));
+            }
         }
+    }
+
+    public static class Globals
+    {
+        public static int ARRAY_SIZE = 5;
+        public static string CHARS = "$%#@!*abcdefghijklmnopqrstuvwxyz1234567890?;:ABCDEFGHIJKLMNOPQRSTUVWXYZ^&";
     }
 }
