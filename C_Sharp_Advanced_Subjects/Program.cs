@@ -24,16 +24,17 @@ namespace C_Sharp_Advanced_Subjects
 
             //Generics:
             GenericArray<int> intArray = new GenericArray<int>(Globals.ARRAY_SIZE);
+            Random rand = new Random();
             for (int i = 0; i < Globals.ARRAY_SIZE; i++)
             {
-                intArray.SetItem(new Random().Next(1, 9), i);
+                intArray.SetItem(rand.Next(1, 9), i);
                 Console.WriteLine(intArray.GetItem(i));
             }
 
             GenericArray<char> charArray = new GenericArray<char>(Globals.ARRAY_SIZE);
             for (int i = 0; i < Globals.ARRAY_SIZE; i++)
             {
-                int randomIndex = new Random().Next(0, Globals.CHARS.Length);
+                int randomIndex = rand.Next(0, Globals.CHARS.Length);
                 charArray.SetItem(Globals.CHARS[randomIndex], i);
                 Console.WriteLine(charArray.GetItem(i));
             }
