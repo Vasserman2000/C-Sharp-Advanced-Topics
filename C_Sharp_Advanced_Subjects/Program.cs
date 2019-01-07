@@ -13,6 +13,9 @@ namespace C_Sharp_Advanced_Subjects
     {
         static void Main(string[] args)
         {
+            // Lambdas
+            LambdaExpressions.LambdasTest.TestLambda();
+
             // Delegates:
             Func<decimal, decimal, decimal> operationsHandler = Operations.Sum;
             operationsHandler += Operations.Substruct;
