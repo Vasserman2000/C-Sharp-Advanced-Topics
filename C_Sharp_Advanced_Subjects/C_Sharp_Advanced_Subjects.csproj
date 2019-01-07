@@ -49,6 +49,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Delegates\Delegates.csproj">
+      <Project>{07460a83-7486-4f5d-a6af-cb37967f568c}</Project>
+      <Name>Delegates</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Generics\Generics.csproj">
       <Project>{f56e955a-3b73-4ccf-9b92-9410fd88fb38}</Project>
       <Name>Generics</Name>
