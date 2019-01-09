@@ -1,19 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{BF4B022A-9D01-47E3-948F-F993152BC33B}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{33A52818-8B57-4E30-B34D-9751AFA44ED9}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>C_Sharp_Advanced_Subjects</RootNamespace>
-    <AssemblyName>C_Sharp_Advanced_Subjects</AssemblyName>
+    <RootNamespace>LambdaExpressions</RootNamespace>
+    <AssemblyName>LambdaExpressions</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +24,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -42,36 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="LambdasTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Delegates\Delegates.csproj">
-      <Project>{07460a83-7486-4f5d-a6af-cb37967f568c}</Project>
-      <Name>Delegates</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Generics\Generics.csproj">
-      <Project>{f56e955a-3b73-4ccf-9b92-9410fd88fb38}</Project>
-      <Name>Generics</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Indexers\Indexers.csproj">
-      <Project>{af80159b-b245-4c51-82ff-99a1b6d27145}</Project>
-      <Name>Indexers</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\LambdaExpressions\LambdaExpressions.csproj">
-      <Project>{33a52818-8b57-4e30-b34d-9751afa44ed9}</Project>
-      <Name>LambdaExpressions</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
 </Project>
