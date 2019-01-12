@@ -65,6 +65,10 @@
       <Project>{33a52818-8b57-4e30-b34d-9751afa44ed9}</Project>
       <Name>LambdaExpressions</Name>
     </ProjectReference>
+    <ProjectReference Include="..\LINQ\LINQ.csproj">
+      <Project>{3074a1c4-0e71-41fc-956b-72d43ef182af}</Project>
+      <Name>LINQ</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
