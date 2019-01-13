@@ -89,6 +89,13 @@ namespace C_Sharp_Advanced_Subjects
                 Console.WriteLine(charArray.GetItem(i));
             }
 
+            var number = new Generics.Nullable<int>();
+            Console.WriteLine("Has value? " + number.HasValue);
+            Console.WriteLine("Value: " + number.GetValueOrDefault());
+
+            var isAnimal = new Generics.Nullable<bool>();
+            Console.WriteLine("Has value? " + isAnimal.HasValue);
+            Console.WriteLine("Value: " + isAnimal.GetValueOrDefault());
         }
     }
 
