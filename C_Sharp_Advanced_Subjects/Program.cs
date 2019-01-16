@@ -96,6 +96,7 @@ namespace C_Sharp_Advanced_Subjects
             var isAnimal = new Generics.Nullable<bool>();
             Console.WriteLine("Has value? " + isAnimal.HasValue);
             Console.WriteLine("Value: " + isAnimal.GetValueOrDefault());
+            Console.ReadKey();
         }
     }
 
