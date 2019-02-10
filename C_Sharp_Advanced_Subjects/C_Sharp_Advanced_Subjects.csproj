@@ -49,9 +49,29 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Asynchronous Programming with Async-Await\Asynchronous Programming with Async-Await.csproj">
+      <Project>{18c4bfc4-4a15-48e7-9836-89701cb0e170}</Project>
+      <Name>Asynchronous Programming with Async-Await</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Delegates\Delegates.csproj">
       <Project>{07460a83-7486-4f5d-a6af-cb37967f568c}</Project>
       <Name>Delegates</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dynamic\Dynamic.csproj">
+      <Project>{b2e50c99-2772-4b4a-a484-d76060176098}</Project>
+      <Name>Dynamic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Events\Events.csproj">
+      <Project>{752a6043-92a2-4092-9a2f-47cfd0eb8e23}</Project>
+      <Name>Events</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Exception Handling\Exception Handling.csproj">
+      <Project>{5780f0b8-ac1a-42f1-be60-4bef2acfb617}</Project>
+      <Name>Exception Handling</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Extension Methods\Extension Methods.csproj">
+      <Project>{0a6c0105-a15f-48e3-88c6-2e3579ae14c9}</Project>
+      <Name>Extension Methods</Name>
     </ProjectReference>
     <ProjectReference Include="..\Generics\Generics.csproj">
       <Project>{f56e955a-3b73-4ccf-9b92-9410fd88fb38}</Project>
@@ -68,6 +88,14 @@
     <ProjectReference Include="..\LINQ\LINQ.csproj">
       <Project>{3074a1c4-0e71-41fc-956b-72d43ef182af}</Project>
       <Name>LINQ</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Nullable Types\Nullable Types.csproj">
+      <Project>{52ad285f-504b-4ddd-9ce5-b8114625408b}</Project>
+      <Name>Nullable Types</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ProducerConsumerProblem\ProducerConsumerProblem.csproj">
+      <Project>{b0fe21ca-2734-4f3d-8e3d-d4051bb519b1}</Project>
+      <Name>ProducerConsumerProblem</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

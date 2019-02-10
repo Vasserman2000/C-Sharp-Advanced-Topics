@@ -3,6 +3,7 @@ using Generics;
 using Indexers;
 using LINQ;
 using System;
+using Dynamic;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -96,6 +97,15 @@ namespace C_Sharp_Advanced_Subjects
             var isAnimal = new Generics.Nullable<bool>();
             Console.WriteLine("Has value? " + isAnimal.HasValue);
             Console.WriteLine("Value: " + isAnimal.GetValueOrDefault());
+
+            // Dynamic types:
+            DynamicType dType = new DynamicType();
+            dType.CheckType();
+
+            dType.dynamicField = 4;
+            int sum = dType.dynamicField + 17;
+            Console.WriteLine("The sum is: " + sum);
+
             Console.ReadKey();
         }
     }
