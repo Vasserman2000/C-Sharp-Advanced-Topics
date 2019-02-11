@@ -105,7 +105,14 @@ namespace C_Sharp_Advanced_Subjects
             dType.dynamicField = 4;
             int sum = dType.dynamicField + 17;
             Console.WriteLine("The sum is: " + sum);
+            dynamic dynamicVariable = 1;
+            Console.WriteLine(dynamicVariable.GetType().ToString());
 
+            DynamicType.PrintValue("Hello World!!");
+            DynamicType.PrintValue(100);
+            DynamicType.PrintValue(100.50);
+            DynamicType.PrintValue(true);
+            DynamicType.PrintValue(DateTime.Now);
             Console.ReadKey();
         }
     }

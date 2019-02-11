@@ -12,10 +12,22 @@ namespace Dynamic
         
         public void CheckType ()
         {
-            dynamicField = 3;
-            Console.WriteLine(dynamicField);
-            dynamicField = "hello";
-            Console.WriteLine(dynamicField);
+            dynamic dynamicVariable = 100;
+            Console.WriteLine("Dynamic variable value: {0}, Type: {1}", dynamicVariable, dynamicVariable.GetType().ToString());
+
+            dynamicVariable = "Hello World!!";
+            Console.WriteLine("Dynamic variable value: {0}, Type: {1}", dynamicVariable, dynamicVariable.GetType().ToString());
+
+            dynamicVariable = true;
+            Console.WriteLine("Dynamic variable value: {0}, Type: {1}", dynamicVariable, dynamicVariable.GetType().ToString());
+
+            dynamicVariable = DateTime.Now;
+            Console.WriteLine("Dynamic variable value: {0}, Type: {1}", dynamicVariable, dynamicVariable.GetType().ToString());
+        }
+
+        public static void PrintValue(dynamic val)
+        {
+            Console.WriteLine(val);
         }
     }
 }
