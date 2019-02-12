@@ -8,5 +8,12 @@ namespace Exception_Handling
 {
     public class ExceptionHandling
     {
+        public class Calculator
+        {
+            public float Divide (int numerator, int denomenator)
+            {
+                return numerator / denomenator;
+            }
+        }
     }
 }

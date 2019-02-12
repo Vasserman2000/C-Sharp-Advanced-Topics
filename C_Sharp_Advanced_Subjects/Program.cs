@@ -4,10 +4,9 @@ using Indexers;
 using LINQ;
 using System;
 using Dynamic;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Exception_Handling;
+using System.IO;
 
 namespace C_Sharp_Advanced_Subjects
 {
@@ -113,6 +112,37 @@ namespace C_Sharp_Advanced_Subjects
             DynamicType.PrintValue(100.50);
             DynamicType.PrintValue(true);
             DynamicType.PrintValue(DateTime.Now);
+
+            // Exceptions Handling:
+            try
+            {
+                ExceptionHandling.Calculator calcul = new ExceptionHandling.Calculator();
+                var result = calcul.Divide(4, 1);
+                //using (var streamReader = new StreamReader("C:/document.txt"))
+                //{
+                //    var content = streamReader.ReadToEnd();
+                //}
+
+                var api = new YouTubeApi();
+                var videos = api.GetVideos(null);
+            }
+            catch (DivideByZeroException)
+            {
+                Console.WriteLine("You cannot divide by zero!");
+            }
+            catch (FileNotFoundException)
+            {
+                Console.WriteLine("File not found");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                //StreamReader.Dispose();
+            }
+
             Console.ReadKey();
         }
     }
