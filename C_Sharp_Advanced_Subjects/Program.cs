@@ -143,6 +143,11 @@ namespace C_Sharp_Advanced_Subjects
                 //StreamReader.Dispose();
             }
 
+            // Extension Methods:
+            string blogPost = "This is a really long blog post with a lots of sentences and paragraphs we would like to shorten";
+
+            string shortenedBolgPost = blogPost.Shorten(6);
+
             Console.ReadKey();
         }
     }
