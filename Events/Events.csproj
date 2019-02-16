@@ -41,7 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Events.cs" />
+    <Compile Include="MailService.cs" />
+    <Compile Include="MessageService.cs" />
+    <Compile Include="Video.cs" />
+    <Compile Include="VideoEncoder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
