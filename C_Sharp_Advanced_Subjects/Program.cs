@@ -17,44 +17,7 @@ namespace C_Sharp_Advanced_Subjects
         {
             #region LINQ
 
-            //// (without LINQ:)
-            //var books = new BookRepository().GetBooks();
-            ///*var cheapBooks = new List<Book>();
-
-            //foreach (Book book in books)
-            //{
-            //    if (book.Price < 10)
-            //        cheapBooks.Add(book);
-            //}*/
-            //// (with LINQ extension methods)
-            //var cheapBooks = books
-            //                    .Where((b) => (b.Price < 10))
-            //                    .OrderBy(b => b.Title);
-            //var title = books.Select(b => b.Title);
-
-            //foreach (Book book in cheapBooks)
-            //{
-            //    Console.WriteLine(book.Title + " " + book.Price);
-            //}
-            //// (with LINQ query operators)
-            //var cheaperBooks = from b in books
-            //                   where b.Price < 10
-            //                   orderby b.Title
-            //                   select b.Title;
-
-            //var specificBook  = books.Single(b => b.Title == "JavaScript: the weird parts"); //not safe (seq. cont. no match)
-            //var specificBook2 = books.SingleOrDefault(b => b.Title == "JavaScript: the weird partss"); // safe
-            //var specificBook3 = books.First(b => b.Title == "Hadoop for beginners"); //not safe
-            //var specificBook4 = books.FirstOrDefault(b => b.Title == "Hadoop for beginners"); //safe
-            //var specificBook5 = books.Last(b => b.Title == "Hadoop for beginners"); //not safe
-            //var specificBook6 = books.LastOrDefault(b => b.Title == "Hadoop for beginners"); //safe
-            //var specificBooks = books.Skip(2).Take(3);
-            //var numberOfBooks = books.Count();
-            //var highestPrice = books.Max(b => b.Price);
-            //var lowestPrice = books.Min(b => b.Price);
-            //var cheapestBook = books.Where(b => b.Price == lowestPrice);
-            //var totalPrices = books.Sum(b => b.Price);
-            //var averagePrice = books.Average(b => b.Price);
+            //LanguageIntegratedQuery.LINQ();
 
             #endregion
 
