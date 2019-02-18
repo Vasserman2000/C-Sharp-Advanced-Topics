@@ -49,10 +49,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Asynchronous Programming with Async-Await\Asynchronous Programming with Async-Await.csproj">
-      <Project>{18c4bfc4-4a15-48e7-9836-89701cb0e170}</Project>
-      <Name>Asynchronous Programming with Async-Await</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Delegates\Delegates.csproj">
       <Project>{07460a83-7486-4f5d-a6af-cb37967f568c}</Project>
       <Name>Delegates</Name>
