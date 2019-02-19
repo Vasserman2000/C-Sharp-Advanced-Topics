@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -35,7 +37,21 @@ namespace Asynchronous_Programming
 
         private void Button_Click(object sender, RoutedEventArgs args)
         {
-            textBlock.Text = "Hello Elisha";
+            //textBlock.Text = "Hello Elisha";
+            DownloadHtml("http://msdn.microsoft.com");
+        }
+
+        private void DownloadHtml(string url)
+        {
+            using (var webClient = new WebClient())
+            {
+                var html = webClient.DownloadString(url);
+
+                using (var streamWriter = new StreamWriter(@"C:\Users\Vasserman\Desktop\result.html"))
+                {
+                    streamWriter.Write(html);
+                }
+            }
         }
     }
 }
