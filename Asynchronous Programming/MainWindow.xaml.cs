@@ -35,13 +35,33 @@ namespace Asynchronous_Programming
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs args)
+        private async void Button_Click(object sender, RoutedEventArgs args)
         {
-            //textBlock.Text = "Hello Elisha";
-            DownloadHtml("http://msdn.microsoft.com");
+            Task<string> html = DownloadHtmlAsync("http://msdn.microsoft.com");
+            textBlock.Text = await html;
+
+            int sum = 4 + 5;
+
+            MessageBoxResult mb = MessageBox.Show("", "ABC", MessageBoxButton.OK, MessageBoxImage.Hand); 
         }
 
-        private void DownloadHtml(string url)
+        private async Task<string> DownloadHtmlAsync(string url)
+        {
+            using (var webClient = new WebClient())
+            {
+                var html = await webClient.DownloadStringTaskAsync(url);
+
+                using (var streamWriter = new StreamWriter(@"C:\Users\Vasserman\Desktop\result.html"))
+                {
+                    await streamWriter.WriteAsync(html);
+
+                    var x = 1 + 2;
+                }
+                return html;
+            }
+        }
+
+        private string DownloadHtml(string url)
         {
             using (var webClient = new WebClient())
             {
@@ -51,6 +71,7 @@ namespace Asynchronous_Programming
                 {
                     streamWriter.Write(html);
                 }
+                return html;
             }
         }
     }
