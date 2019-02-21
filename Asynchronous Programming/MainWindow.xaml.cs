@@ -38,20 +38,24 @@ namespace Asynchronous_Programming
         private async void Button_Click(object sender, RoutedEventArgs args)
         {
             Task<string> html = DownloadHtmlAsync("http://msdn.microsoft.com");
-            textBlock.Text = await html;
 
-            int sum = 4 + 5;
+            textBlock.Text = await html;
 
             MessageBoxResult mb = MessageBox.Show("", "ABC", MessageBoxButton.OK, MessageBoxImage.Hand); 
         }
 
+        // Three things to note in the signature:  
+        //  - The method has an async modifier.   
+        //  - The return type is Task or Task<T>.  
+        //    Here, it is Task<string> because the return statement returns a string.  
+        //  - The method name ends in "Async." 
         private async Task<string> DownloadHtmlAsync(string url)
         {
             using (var webClient = new WebClient())
             {
                 var html = await webClient.DownloadStringTaskAsync(url);
 
-                using (var streamWriter = new StreamWriter(@"C:\Users\Vasserman\Desktop\result.html"))
+                using (var streamWriter = new StreamWriter(@"C:\Users\result.html"))
                 {
                     await streamWriter.WriteAsync(html);
 
